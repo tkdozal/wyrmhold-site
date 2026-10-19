@@ -133,15 +133,37 @@
   <div class="wrap">
     <div class="rv">
       <p class="eyebrow">The climb</p>
-      <h2>Up through the hold</h2>
-      <p class="lead">Each level ends in a boss, and some of them have more than one life to take. Runs are assembled fresh every time, so no two roads up are the same.</p>
+      <h2>Two roads, one wyrm</h2>
+      <p class="lead">Every run takes one of two roads up into the hold, chosen at random. Each road crosses two levels and ends in a boss, and both come out at the same castle, and the same dragon.</p>
     </div>
-    <div class="climb">
-      <article class="level rv"><img src="assets/img/biome-crypt.webp" width="1280" height="720" loading="lazy" alt=""><div><p class="n">Level one</p><h3>The Crypt</h3><p>Beneath the hold, where the first of the dead are waiting.</p></div></article>
-      <article class="level rv"><img src="assets/img/biome-cemetery.webp" width="1280" height="720" loading="lazy" alt=""><div><p class="n">Level two</p><h3>The Cemetery</h3><p>The graves at the walls, and what has climbed out of them.</p></div></article>
-      <article class="level rv"><img src="assets/img/biome-castle.webp" width="1280" height="720" loading="lazy" alt=""><div><p class="n">Level three</p><h3>The Castle</h3><p>The throne rooms, and the wyrm that sits above them.</p></div></article>
+
+    <div class="routes rv" id="routes">
+      <article class="route" data-route="dead">
+        <h3 class="route-name">The Road of the Dead</h3>
+        <div class="level"><img src="assets/img/biome-cemetery.webp" width="1280" height="720" loading="lazy" alt=""><div><p class="n">Level one</p><h4>The Cemetery</h4><p>The graves at the walls, and what has climbed out of them.</p></div></div>
+        <div class="step" aria-hidden="true"></div>
+        <div class="level"><img src="assets/img/biome-crypt.webp" width="1280" height="720" loading="lazy" alt=""><div><p class="n">Level two</p><h4>The Crypt</h4><p>Beneath the graves, where the older dead are waiting.</p></div></div>
+      </article>
+      <article class="route" data-route="wild">
+        <h3 class="route-name">The Road of the Wild</h3>
+        <div class="level"><img src="assets/img/biome-forest.webp" width="1280" height="720" loading="lazy" alt=""><div><p class="n">Level one</p><h4>The Forest</h4><p>Moonlit and watched: thieves, bugs and wild things in the dark.</p></div></div>
+        <div class="step" aria-hidden="true"></div>
+        <div class="level"><img src="assets/img/biome-caves.webp" width="1280" height="720" loading="lazy" alt=""><div><p class="n">Level two</p><h4>The Caves</h4><p>Under the roots, where the light gives out.</p></div></div>
+      </article>
     </div>
-    <p class="top rv">&hellip; and at the top, the wyrm.</p>
+
+    <div class="roll rv">
+      <button type="button" class="btn ghost" id="roll">Roll the road</button>
+      <p id="rolled" aria-live="polite">Which road will the dice give you?</p>
+    </div>
+
+    <div class="merge rv" aria-hidden="true"><span>Both roads lead here</span></div>
+
+    <div class="finale rv">
+      <div class="level wide"><img src="assets/img/biome-castle.webp" width="1280" height="720" loading="lazy" alt=""><div><p class="n">Level three</p><h4>The Castle</h4><p>The throne rooms, and the stair that leads up to the wyrm.</p></div></div>
+      <div class="step" aria-hidden="true"></div>
+      <div class="level wide wyrm"><img src="assets/img/wyrm.webp" width="1280" height="800" loading="lazy" alt="The wyrm coiled around the highest towers of Wyrmhold, a furnace glow at its heart."><div><p class="n">The top of the hold</p><h4>The Wyrm</h4><p>Every road ends here.</p></div></div>
+    </div>
   </div>
 </section>
 
